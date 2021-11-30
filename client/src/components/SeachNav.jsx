@@ -18,7 +18,6 @@ export default function SeachNav() {
   };
   return (
     <div className="search-container">
-      {/*TODO: agregar link home */}
       <Link to="/">
         <img className="nav-logo" src="/assets/Logo_ML.png" alt="logo" />
       </Link>
@@ -37,18 +36,6 @@ export default function SeachNav() {
           </div>
         </button>
       </form>
-      {/*       
-      <input
-        className="search-box-input"
-        type="text"
-        placeholder="Nunca dejes de buscar"
-        onChange={handleChange}
-      ></input>
-      <button className="nav-search-btn" onClick={handleSubmit}>
-        <div className="nav-icon-search">
-          <img src="/assets/ic_Search.png" alt="logo" />
-        </div>
-      </button> */}
     </div>
   );
 }
