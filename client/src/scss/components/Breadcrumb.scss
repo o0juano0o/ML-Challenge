@@ -1,0 +1,19 @@
+@import "../abstracts/colors";
+@import "../abstracts/spacers";
+@import "../abstracts/fonts";
+
+.breadcrumb {
+  display: flex;
+  color: $grey-3;
+  list-style: none;
+  padding: $spacer-1 0px;
+  margin: 0px;
+
+  li {
+    padding: 0px 2.5px;
+    font-size: $font-2;
+  }
+  li.bold {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,79 @@
+@import "../abstracts/spacers";
+@import "../abstracts/colors";
+
+li {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  display: flex;
+  padding: $spacer-1;
+  // border-bottom: 2px solid $grey-4;
+}
+.card-border-bottom {
+  background-color: $grey-4;
+  height: 2px;
+  width: 95%;
+  align-self: center;
+}
+
+.card-container {
+  background-color: #ffffff;
+}
+.card-description {
+  padding: $spacer-1;
+  width: 75%;
+}
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 180px;
+}
+.card-img {
+  height: 100%;
+  width: 100%;
+  max-height: 180px;
+  max-width: 180px;
+  object-fit: contain;
+}
+.card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card-price-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card-price-sign,
+.card-price {
+  font-size: 24px;
+}
+
+.card-price {
+  padding: 0px 5px;
+}
+.card-address {
+  font-size: 12px;
+  color: $grey-3;
+}
+.card-address-container {
+  min-width: 100px;
+  margin-top: $spacer-1;
+}
+.card-price-decimals {
+  vertical-align: super;
+}
+.card-title-container {
+  padding-top: $spacer-2;
+  width: 60%;
+}
+.card-title {
+  font-size: 18px;
+}
+.card-shipping {
+  height: 15px;
+  width: 15px;
+}

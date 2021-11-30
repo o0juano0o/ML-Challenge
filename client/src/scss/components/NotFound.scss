@@ -1,0 +1,36 @@
+@import "../abstracts/spacers";
+@import "../abstracts/colors";
+
+.notFound-main-cointainer {
+  background-color: $grey-5;
+  margin-top: $spacer-2;
+}
+
+.notFound-cointainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacer-2;
+}
+.notFound-img {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.notFound-text {
+  ul {
+    width: 100%;
+  }
+  li {
+    display: list-item;
+  }
+  span {
+    font-weight: bold;
+  }
+}
