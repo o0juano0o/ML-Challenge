@@ -10,11 +10,12 @@ export default function Breadcrumb() {
         <ul className="breadcrumb">
           {categories?.map((category, index) => {
             return categories.length - 1 === index ? (
-              <li className="bold">{category} </li>
+              <li key={category} className="bold">
+                {category}{" "}
+              </li>
             ) : (
               <>
                 <li>{category}</li>
-                {/* TODO: Poner category dentro de un LINK */}
                 <li>{">"}</li>
               </>
             );

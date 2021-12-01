@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getSingleProductRequest } from "../store/singleProducts";
+import {
+  getSingleProductRequest,
+  cleanSingleProductsRequest,
+} from "../store/singleProducts";
 import { getDecimals, numberWithDot } from "../hooks/priceFormat";
+import Nothing from "../components/Nothing";
 import NotFound from "../components/NotFound";
 import Breadcrumb from "../components/Breadcrumb";
 import "../scss/components/SingleProduct.scss";
@@ -10,12 +14,16 @@ import "../scss/components/SingleProduct.scss";
 export default function SingleProduct() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const product = useSelector((state) => state.selectedProduct);
+  let product = useSelector((state) => state.selectedProduct);
 
   useEffect(() => {
+    dispatch(cleanSingleProductsRequest());
     dispatch(getSingleProductRequest(id));
   }, [id]);
 
+  if (!product.item) {
+    return <Nothing />;
+  }
   return (
     <>
       <Breadcrumb />

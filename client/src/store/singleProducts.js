@@ -1,6 +1,16 @@
 import axios from "axios";
-import { createReducer, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  createReducer,
+  createAsyncThunk,
+  createAction,
+} from "@reduxjs/toolkit";
 
+export const cleanSingleProductsRequest = createAction(
+  "CLEARSINGLEPRODUCT",
+  () => {
+    return {};
+  }
+);
 export const getSingleProductRequest = createAsyncThunk(
   "SINGLEPRODUCT",
   (id) => {
@@ -14,6 +24,11 @@ const singleProductsReducer = createReducer(
   {},
   {
     [getSingleProductRequest.fulfilled]: (state, action) => action.payload,
+    [cleanSingleProductsRequest]: (state, action) => {
+      let clear = state;
+      clear = {};
+      return clear;
+    },
   }
 );
 
