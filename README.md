@@ -19,7 +19,7 @@ server: Localhost: 3001;
 
 *Vista de Producto Seleccionado
 
-*Vista Producto no encontrado
+*Vista Producto no encontrado (Esta hecha pero no se llego a incorporar al flow de la app)
 
 
 ### Comunicación Api
